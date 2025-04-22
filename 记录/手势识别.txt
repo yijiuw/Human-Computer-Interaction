@@ -1,0 +1,15 @@
+1.打开kinect2的话题
+roslaunch kinect2_bridge kinect2_bridge.launch
+2.检查 ROS 话题是否发布
+rostopic list
+    出现/kinect2/hd/image_color      # 高清 RGB
+       /kinect2/qhd/image_color     # 四分之一高清 RGB
+       /kinect2/sd/image_color      # 标清 RGB
+       /kinect2/depth/image         # 深度图
+    就成功了
+3.检查画面是否出现
+rosrun image_view image_view image:=/kinect2/sd/image_color
+    出现画面就成功了
+4.在运行程序
+    /home/rebot/PycharmProjects/PythonProject/--main/0.12_learn_kinect2_MediaPipe.py
+    显示出识别后的画面就算成功
